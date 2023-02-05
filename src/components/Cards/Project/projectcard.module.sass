@@ -1,0 +1,127 @@
+@use '../../../app/var'
+.projectcard
+    outline: 1px solid rgba(var.$main,.5)
+    width: 250px
+    height: 400px
+    background: black
+    border-radius: 32px
+    box-shadow: 0px 32px 30px 1px rgba(black,.5)
+    transition: 1s
+    &:hover
+        transform: scale(1.02)
+
+    .image
+        display: flex
+        justify-content: center
+        overflow: hidden
+        border-radius: 32px 32px 0px 0px
+
+        img
+            width: 200%
+            height: 250px
+            object-fit: cover
+            cursor: pointer
+            transform: translateY(-50px)
+
+    .content
+        background: linear-gradient(to bottom,transparent 20%,darken(var.$bg,2%) 40%)
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        bottom: 250px
+        width: 100%
+        height: inherit
+        padding: 0 24px
+        padding-bottom: 50px
+        gap: 12px
+        border-radius: 0px 0px 32px 32px
+        pointer-events: none
+        
+        .brights
+            width: inherit
+            height: inherit
+            position: absolute
+            top: 0px 
+            left: 0px
+            overflow: hidden
+            pointer-events: none
+            border-radius: 32px
+
+            .bright1
+                position: absolute
+                background: #412178
+                bottom: 64px
+                left: 80%
+                height: 128px
+                width: 128px
+                border-radius: 50%
+                filter: blur(64px)
+
+            .bright2
+                position: absolute
+                background: #412178
+                top: 8px
+                left: -60px
+                height: 128px
+                width: 128px
+                border-radius: 50%
+                filter: blur(64px)
+
+
+        .title
+            font-size: 20px
+
+        p
+            width: 100%
+            font-size: 13px
+            color: var.$main
+            height: 50px
+            overflow: hidden
+
+        a
+            transition: .5s
+            cursor: pointer
+            border: none
+            border-top: 1px solid var.$main
+            padding: 10px
+            color: white
+            pointer-events: all
+
+
+            &:hover
+                transform: scale(1.05)
+            svg
+                width: 18px
+                height: auto
+                color: white
+
+
+        .externalButtons
+            width: 100%
+            display: flex
+            gap: 12px
+            a
+                border-radius: 4px
+                background: rgba(var.$main,.2)
+                
+
+        .internalButton
+            width: 250px
+            a
+                display: flex
+                backdrop-filter: blur(3px)
+                justify-content: center
+                align-items: center
+                box-shadow: 0px 15px 10px 1px rgba(black,.5)
+                gap: 16px
+                svg
+                    width: 24px
+                span
+                    width: 70%
+                    font-size: 14px
+                    color: white
+                padding: 24px 0px
+                width: 100%
+                border-radius: 8px
+                background: linear-gradient(to right,rgba(var.$main,.2) 50%,rgba(var.$main,.4),rgba(var.$main,.2))

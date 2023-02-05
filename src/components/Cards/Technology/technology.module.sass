@@ -1,0 +1,38 @@
+@use '../../../app/var'
+
+.technology
+    width: 200px
+    height: auto
+    display: flex
+    flex-direction: column
+    margin-top: 32px
+    text-align: center
+
+
+    .name
+        font-size: 18px
+        font-weight: 400
+        letter-spacing: 1px
+        color: white
+        margin-bottom: 4px
+
+        
+    .since
+        font-weight: 400
+        color: var.$main
+        font-size: 14px
+    
+    img
+        width: 100px
+        height: 100px
+        object-fit: contain
+        margin-bottom: 40px
+        align-self: center
+
+
+@media screen and ( max-width: 500px )
+    .technology
+        align-items: center
+        width: 120px
+        img
+            width: 80px
